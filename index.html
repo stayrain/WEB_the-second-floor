@@ -9,7 +9,7 @@
     <body>
     
         <video autoplay muted loop>
-  <source src="/assets/home_page.webm" type="video/webm">
+  <source src="assets/home_page.webm" type="video/webm">
         </video>
     <main>
 
@@ -34,7 +34,7 @@
     <section id="ideas">
     </section>
     <section id="about">
-        <p>Yuxiao Liang<br /> <br />yuxiao_liang@outlook.com<br /> <br /><a href="https://www.instagram.com/yucca_lll/" ><img src="../assets/logo.png"></a></p>
+        <p>Yuxiao Liang<br /> <br />yuxiao_liang@outlook.com<br /> <br /><a href="https://www.instagram.com/yucca_lll/" ><img src="assets/logo.png"></a></p>
     </section>
     </main>
     </body>
@@ -42,7 +42,7 @@
     <script>
         linking();
         async function linking() {
-        const response = await fetch('/assets/link.json');
+        const response = await fetch('assets/link.json');
         const data = await response.json();
         for (let i = 0, a = 0, b = 0; i < data.length; i++, a++){
             if(data[i].S == 1) {
