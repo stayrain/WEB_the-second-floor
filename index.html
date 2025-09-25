@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>YUXIAO LIANG</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <video autoplay muted loop>
+  <source src="/assets/home_page.webm" type="video/webm">
+        </video>
+    <main>
+
+    <nav>
+    <li><a href="#digital">DIGITAL</a></li>
+    <li><a href="#physical">PHYSICAL</a></li>
+    <li><a href="#ideas">IDEAS</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    </nav>
+    <div id="re">
+            <a id="gp" href="">
+                <img src="" >
+                <span class="tooltip">showcase</span>
+            </a>
+            <figcaption></figcaption>
+            <a></a>
+        </div>
+    <section id="digital">     
+    </section>
+    <section id="physical">
+    </section>
+    <section id="ideas">
+    </section>
+    <section id="about">
+        <p>Yuxiao Liang<br /> <br />yuxiao_liang@outlook.com<br /> <br /><a href="https://www.instagram.com/yucca_lll/" ><img src="../assets/logo.png"></a></p>
+    </section>
+    </main>
+    </body>
+
+    <script>
+        linking();
+        async function linking() {
+        const response = await fetch('../assets/link.json');
+        const data = await response.json();
+        for (let i = 0, a = 0, b = 0; i < data.length; i++, a++){
+            if(data[i].S == 1) {
+                var se = "digital";
+                attach(se);
+            }
+            if(data[i].S == 2) {
+                var se = "physical";
+                attach(se);
+            }
+            if(data[i].S == 3) {
+                var se = "ideas";
+                attach(se);
+            }
+            function attach(s){
+                var mdiv = document.createElement("div");  
+                mdiv.innerHTML = document.getElementById("re").innerHTML;
+                mdiv.className = "itm";
+                mdiv.children[0].href = data[i].L;
+                mdiv.children[0].children[0].outerHTML= `"<img src="${data[i].P}">"`;  
+                mdiv.children[1].innerHTML = data[i].C;
+                
+                if (data[i].D != ""){
+                mdiv.children[2].id = "gd",
+                mdiv.children[2].innerHTML = `${data[i].T} <span class="tooltip">Proposal</span>`;
+                mdiv.children[2].href = data[i].D;
+                }else{
+                mdiv.children[2].innerHTML = data[i].T
+                }
+                document.getElementById(s).appendChild(mdiv);
+            }
+        }
+    }
+    </script>
+
+
+</html>
