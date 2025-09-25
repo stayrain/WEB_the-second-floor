@@ -1,24 +1,24 @@
 @font-face {
 	font-family: 'pookiest';
-	src: local('pookiest'), url('../assets/pookiest.woff') format('woff');
+	src: local('pookiest'), url('assets/pookiest.woff') format('woff');
     
 
 }
 
 @font-face {
 	font-family: 'UTMNeutra';
-    src: local('UTMNeutra'), url('../assets/UTMNeutra.woff') format('woff');
+    src: local('UTMNeutra'), url('assets/UTMNeutra.woff') format('woff');
 
 }
 
 @font-face {
 	font-family: 'CASTELAR';
-    src: local('CASTELAR'), url('../assets/CASTELAR.woff') format('woff');
+    src: local('CASTELAR'), url('assets/CASTELAR.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'scolver';
-    src: url('../assets/scolver.otf');
+    src: url('assets/scolver.otf');
 }
 
 html{
@@ -141,7 +141,7 @@ section:target{
     font-family: CASTELAR;
     color: aliceblue;
     font-size: 2rem;
-    background-image: url('../assets/Layer1.png');
+    background-image: url('assets/Layer1.png');
     background-size: 120%;
 }
 
