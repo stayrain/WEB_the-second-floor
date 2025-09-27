@@ -182,14 +182,68 @@ figcaption{
     visibility: hidden;
 }
 
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 992px) {
+   li{
+        font-size: 1.7rem; 
+    };
+    
+     .itm a{
+        font-size: 1.6em;
+    }
+    figcaption{
+        font-size: 1.2rem;
+    }
+    #gd:hover{
+    font-size: 1.8rem;
+    }
+    .tooltip{
+        font-size: 1.5rem;
+    }
+    .itm{
+        flex-basis: 30%;
+    }
 }
 
 @media screen and (max-width: 768px) {
- 
+    li{
+        font-size: 1.5rem;
+    };
+    
+     .itm a{
+        font-size: 1.3rem;
+    }
+    figcaption{
+        font-size: 0.8rem;
+    }
+    #gd:hover{
+    font-size: 1.5rem;
+    }
+    .tooltip{
+        font-size: 1.2rem;
+    }
+    .itm{
+        flex-basis: 50%;
+    }
 }
 
 @media screen and (max-width: 576px) {
-
+    li{
+        font-size: 1rem;
+    
+    };
+     .itm a{
+        font-size: 1rem;
+    }
+    figcaption{
+        font-size: 0.6rem;
+    }
+    #gd:hover{
+    font-size: 1.2rem;
+    }
+    .tooltip{
+        font-size: 0.8rem;
+    }
+    .itm{
+        flex-basis: 100%;
+    }
 }
