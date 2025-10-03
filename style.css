@@ -1,24 +1,11 @@
 @font-face {
-	font-family: 'pookiest';
-	src: local('pookiest'), url('assets/pookiest.woff') format('woff');
-    
-
+	font-family: 'hubotsans_semiboold';
+    src: url('assets/HubotSans_Condensed-SemiBold.ttf');
 }
 
 @font-face {
-	font-family: 'UTMNeutra';
-    src: local('UTMNeutra'), url('assets/UTMNeutra.woff') format('woff');
-
-}
-
-@font-face {
-	font-family: 'CASTELAR';
-    src: local('CASTELAR'), url('assets/CASTELAR.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'scolver';
-    src: url('assets/scolver.otf');
+	font-family: 'hubotsans_light';
+    src: url('assets/HubotSans_Condensed-Light.ttf');
 }
 
 html{
@@ -43,14 +30,15 @@ nav{
 }
 
 li{
-    -webkit-text-stroke: 1px rgb(189, 220, 224);
+    /* -webkit-text-stroke: 1px rgb(0, 0, 0); */
     text-decoration:none;
-    font-size: 2rem;
-    font-family: UTMNeutra;
+    font-size: 4rem;
+    font-family: hubotsans_semiboold;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 li a{
+    color: white;
     text-decoration-line: none;
 }
 
@@ -60,20 +48,31 @@ li :hover{
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 30px #000000, 0 0 ;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.3), 0 0 ;
   }
   
   to {
-    text-shadow: 0 0 50px #1decec, 0 0 30px #19c1c7, 0 0 40px #1478b3, 0 0 50px #11b1da, 0 0 60px #02393b, 0 0 70px #07c7d4, 0 0 80px #000000;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 ;
   }
 }
 
+#bg{
+    position: fixed;
+    width: 100%;
+
+}
+#bg img{
+    position: absolute;
+    width: 100%;
+    mix-blend-mode: hard-light;
+    opacity: 60%;
+}
+
 video{
+        width: 100%;
+
     top:0;
     right: 0;
-    position: fixed;
-     width: 100%;
- 
 }
 
 section{
@@ -94,32 +93,42 @@ section:target{
     flex-basis: 20%;
     padding: 20px;   
     /* background-color: #1478b3; */
+   
 }
+
+#gp{
+    /* border: red 1px double; */
+    border-image-source: url('assets/Layer1.png');
+    border-image-slice: 100 100 100 100 fill;
+    border-image-repeat: stretch;
+}
+
 
 #gp img{
     position: relative;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border: #057550 5px ridge;
     object-fit: contain;
+    /* border: #b4b4b4 5px double; */
+    mix-blend-mode: exclusion;
 }
 
 #gp:hover > img{
-    border: #aac7ac 5px double;
+    /* border: #ffffff 2px double; */
     object-fit: none;
 }
 
 .tooltip{
-    font-family: scolver;
+    font-family: hubotsans_light;
     visibility: hidden;
     /* display: inline-block; */
     position: absolute;
     /* text-align: center; */
     z-index: 1;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 2rem;
     font-style: bold;
-    background-color: rgb(98, 142, 236);
+    background-color: rgb(255, 255, 255);
     bottom: 90%;
     opacity: 0;
     transition: opacity 0.4s;
@@ -138,17 +147,17 @@ section:target{
     bottom: 0;
     right: 0;
     float: right;
-    font-family: CASTELAR;
+    font-family: hubotsans_semiboold;
     color: aliceblue;
     font-size: 2rem;
-    background-image: url('assets/Layer1.png');
+    background-image: url('../assets/Layer1.png');
     background-size: 120%;
 }
 
 #gd:hover{
     font-size: 2.5rem;
     text-decoration: underline;
-    color: #79b7eb;
+    color: rgb(255, 255, 255);
 
     .tooltip{
     visibility: visible;
@@ -159,18 +168,18 @@ section:target{
 
 figcaption{
     font-size:1.7rem;
-    font-family: scolver;
+    font-family: hubotsans_light;
     color: white;
+    background-color: #000000;
 }
 
 #about p{
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
+    margin:auto;
+    font-size: 4rem;
     color: white;
-    font-family: pookiest;
+    font-family: hubotsans_light;
     font-style: bold;
-    -webkit-text-stroke: 5px rgba(78, 81, 99, 0.3);
+    -webkit-text-stroke: 5px rgba(255, 255, 255, 0.3);
 }
 
 #about img{
@@ -181,6 +190,13 @@ figcaption{
 #re{
     visibility: hidden;
 }
+
+
+@media screen and (max-width: 1200px) {
+   li{
+        font-size: 2.3rem; 
+    };
+}   
 
 @media screen and (max-width: 992px) {
    li{
